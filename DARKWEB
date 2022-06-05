@@ -1,0 +1,144 @@
+import colorama
+from colorama import init
+init()
+from colorama import Fore, Back, Style
+import pyfiglet
+from pyfiglet import Figlet
+from pyfiglet import *
+from termcolor import colored
+from random import randint
+import time
+import sys
+import random
+import secrets
+from random import randint
+import os
+import string
+
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+os.system('cls')
+print(Fore.CYAN + f"""
+                                                 ┉▒┉                                                
+                                                ┉▒▓▓┉                                               
+                                               ┉▒▒▓█▓┉                                              
+                                              ┉▒▒▒▓██▓┉                                             
+                                             ┉▒▒▒▒▓█▓█▓┉                                            
+                                            ┉▒▒▒▒▒▓█▓▓█▓┉                                           
+                                           ┉▒▒▒▒▒▒▓█▓▓▓█▓┉                                          
+                                          ┉▒▒▒▒▒▒▒▓█▓▓▓▓█▓┉                                         
+                                         ┉▒▒▒▒▒▒▒▒▓█▓▓▓▓▓█▓┉                                        
+                                        ┉▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓█▓┉                                       
+                                       ┉▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓█▓┉                                      
+                                      ┉▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓█▓┉                                     
+                                     ░▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓█▓┉                                    
+                                    ░▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓█▓┉                                   
+                                   ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓█▓┉                                  
+                                  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                                 
+                                 ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                                
+                                ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                               
+                               ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                              
+                              ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                             
+                             ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓█▓┉                            
+                            ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓█████████▓▓▓▓▓▓▓▓▓▓▓█▓┉                           
+                           ░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓█████████████▓▓▓▓▓▓▓▓█▓┉                          
+                          ░▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓█████████████████▓▓▓▓▓█▓┉                         
+                         ░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████████████████████▓▓▓█▓┉                        
+                        ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█████████████████████████▓┉                       
+                       ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██████████████████████████▓┉                      
+                       ░▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█████████████████████████▓▒┉                      
+                         ┉░▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██████████████████████▓▒┉                    Devved By @BENJA.ETH-BTC     
+                       ┉┉   ┉░▒▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████████████████████▒░┉  ┉░┉                      
+                       ┉░░┉┉   ┉░▓▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓█████████████████▓░┉  ┉░▒▓░                       
+                         ░▒▒░┉┉   ┉▒▓▓█▓▓▓▓▓▓▓▓▓▓▓██████████████▓░┉   ┉▒▓█▓┉                        
+                          ┉▒▒▒▒░┉┉  ┉░▒▓▓▓▓▓▓▓▓▓▓▓███████████▓▒┉   ┉▒▓███▒┉                         
+                           ┉░▒▒▒▒░░┉   ┉░▒▓▓▓▓▓▓▓▓████████▓▒┉   ┉░▓▓████▒┉                          
+                            ┉░▒▒▒▒▒▒░░┉   ┉░▒▓█▓▓▓█████▓▒░   ┉░▒▓██▓▓██░                            
+                             ┉░▒▒▒▒▒▒▒▒░░┉   ┉░▓▓████▒░┉  ┉░▒▓███▓▓▓█▓░                             
+                               ░▒▒▒▒▒▒▒▒▒▒░┉┉   ┉▒▒░┉  ┉░▒▓███▓▓▓▓▓█▓┉                              
+                                ┉▒▒▒▒▒▒▒▒▒▒▒▒░┉┉     ┉▒▓███▓▓▓▓▓▓▓█▓┉                               
+                                 ┉▒▒▒▒▒▒▒▒▒▒▒▒▒▒░┉┉░▓▓██▓▓▓▓▓▓▓▓▓█▒┉                                
+                                  ┉░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓��█▓▓▓▓▓▓▓▓▓▒┉                                  
+                                   ┉░▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓▓█▓░                                   
+                                     ░▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓▓█▓░                                    
+                                      ░▒▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓▓█▓┉                                     
+                                       ┉▒▒▒▒▒▒▒▒▒▒▓█▓▓▓▓▓▓▓█▒┉                                      
+                                        ┉░▒▒▒▒▒▒▒▒▓█▓▓▓▓▓██▒┉                                       
+                                         ┉░▒▒▒▒▒▒▒▓█▓▓▓▓█▓░                                         
+                                          ┉░▒▒▒▒▒▒▓█▓▓▓█▓░                                          
+                                            ░▒▒▒▒▒▓█▓▓█▓┉                                           
+                                             ┉▒▒▒▒▓█▓█▓┉                                            
+                                              ┉▒▒▒▓██▒┉                                             
+                                               ┉░▒▓█▒                                               
+                                                ┉░▓░                                                
+                                                 ┉┉                                                 
+  
+                                      [ Wallet Mining Service. ]
+
+{Fore.WHITE}[ {Fore.GREEN}1 {Fore.WHITE}] : {Fore.RED}Start ETH Wallet Mining
+{Fore.WHITE}[ {Fore.GREEN}2{Fore.WHITE} ] : {Fore.RED}Quit Miner
+""")
+
+print(f'{Fore.WHITE}[ {Fore.RED}?{Fore.WHITE} ] : {Fore.GREEN}', end="")
+option = input('')
+if option == '1':
+    print(f'{Fore.WHITE}[ {Fore.RED}ETHERUM Wallet Address{Fore.WHITE} ] : {Fore.GREEN}', end="")
+    wallet = input('')
+    os.system('cls')
+
+if option == '2':
+    print(f'{Fore.RED} Closing ETHERUM Wallet Miner..')
+    exit(0)
+
+
+print(f'{Fore.WHITE}[{Fore.RED}Confirm This Is YOUR ETHERUM Wallet (Y/N) {Fore.WHITE}] :{Fore.GREEN} [{wallet}]', end="\n")
+print(f'{Fore.WHITE}[ {Fore.RED}?{Fore.WHITE} ] : {Fore.GREEN}', end="")
+confirmation = input('')
+if confirmation == 'Y':
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.MAGENTA}Checking Wallet...')
+    print()
+    time.sleep(0.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.GREEN}Successfull, Wallet Address Is VALID!')
+    print()
+    time.sleep(1.5)
+    print(f'{Fore.WHITE} [{Fore.RED}!{Fore.WHITE}] {Fore.RED}Wallet Mining Begins In 3 Seconds.')
+    time.sleep(3)
+else:
+    print(f'{Fore.WHITE} [{Fore.RED}SIGMA{Fore.WHITE}] {Fore.GREEN}Please If still not working, contact SUPPORT @BENJA.ETH-BTC ')
+    time.sleep(1.2)
+
+continuing = True
+
+btcval = 31643.79
+time.sleep(0.50)
+while True:
+  if continuing == True:
+    time.sleep(.01)
+    ranInt = randint(0, 2500)
+    if ranInt <= 1:
+      randomBTC = randint(1,100)/100
+      print(Fore.WHITE + "--> 0x" + secrets.token_hex(20) + Fore.GREEN + " -> " + str(randomBTC) + " BTC ($" + str("{:,}".format(round(btcval*randomBTC,2))) + ")")
+      print()
+      print(Fore.RED + "-->All ETH was transferred to your wallet")
+      print()
+      answer = input(Fore.BLUE + "> Would you like to continue mining? (Y/N)")
+      if answer.lower() == "y":
+        continuing = True
+      else:
+       continuing = False
+    else:
+      print(Fore.GREEN + "[VALID] --> 0x" + secrets.token_hex(20) + Fore.RED + " -> 0.00 ETH ")
+  else:
+    break
+  
+      
+        
